@@ -2,7 +2,13 @@ package com.algorithms.tree
 
 import scala.collection.immutable.Set
 
-object LevelOrderTraversalRecursive {
+/**
+ * Path with maximum distinct nodes in a Binary Tree.
+ *
+ * @author Antonio Damato
+ *
+ */
+object PreOrderTraversalRecursive {
   private def findDistinctRecursive(tree: Tree, values: Set[Int]): Int = {
     if (tree.left.isEmpty && tree.right.isEmpty)
       values.size

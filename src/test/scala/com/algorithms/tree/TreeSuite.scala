@@ -59,19 +59,19 @@ class TreeSuite extends FunSuite {
 
   test("Simple Tree One Node") {
     val tree = Tree(7, None, None)
-    val n = LevelOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
+    val n = PreOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
     assert(n == 1)
   }
 
   test("Simple Tree Recursive") {
     val tree = createSimpleTree()
-    val n = LevelOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
+    val n = PreOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
     assert(n == 4)
   }
 
   test("Complex Tree Recursive") {
     val tree = createComplexTree()
-    val n = LevelOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
+    val n = PreOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
     assert(n == 5)
   }
 }
