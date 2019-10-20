@@ -3,3 +3,6 @@
 /build/
 target/
 project/
+.project
+.classpath
+.settings
