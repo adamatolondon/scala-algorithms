@@ -3,6 +3,10 @@ package com.algorithms.fibonacci
 import org.scalatest.FunSuite
 import org.scalactic.source.Position.apply
 
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
+
+@RunWith(classOf[JUnitRunner])
 class FibonacciSuite extends FunSuite {
   test("Simple") {
     assert(1 == Fibonacci.value(0))
