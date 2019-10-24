@@ -5,9 +5,6 @@ import org.scalactic.source.Position.apply
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 
-import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
-
 @RunWith(classOf[JUnitRunner])
 class FibonacciSuite extends FunSuite {
   test("Simple") {
