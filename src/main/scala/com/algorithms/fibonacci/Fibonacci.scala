@@ -8,10 +8,24 @@ object Fibonacci {
   def value(index: Int): Int = {
     if (index < 0) throw new IllegalArgumentException
 
-    index match {
-      case 0 => 1
-      case 1 => 1
-      case _ => value(index - 2) + value(index - 1)
+    if (index == 0 || index == 1)
+      return 1
+
+    var n1 = 0
+    var n2 = 0
+    var value = 0
+    var i = 0
+    for (i <- 0 until index) {
+      if (i == 0)
+        n1 = 1
+      else if (i == 1) n2 = 1
+
+      value = n1 + n2
+      n2 = n1
+      n1 = value
+      println("value=" + value)
     }
+
+    return value
   }
 }
