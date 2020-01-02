@@ -12,14 +12,14 @@ plugins {
 }
 
 dependencies {
-    compile 'org.scala-lang:scala-library:2.12.3'
+    compile 'org.scala-lang:scala-library:2.13.1'
 
     // Use Scalatest for testing our library
     testCompile 'junit:junit:4.12'
-    testCompile 'org.scalatest:scalatest_2.12:3.0.5'
+    testCompile 'org.scalatest:scalatest_2.13:3.0.8'
 
     // Need scala-xml at test runtime
-    testRuntime 'org.scala-lang.modules:scala-xml_2.12:1.1.1'
+    testRuntime 'org.scala-lang.modules:scala-xml_2.13:1.1.1'
 }
 
 // In this section you declare where to find the dependencies of your project
