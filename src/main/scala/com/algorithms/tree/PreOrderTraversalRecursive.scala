@@ -9,11 +9,11 @@ import scala.collection.immutable.Set
  *
  */
 object PreOrderTraversalRecursive {
-  private def findDistinctRecursive(tree: Tree, values: Set[Int]): Int = {
+  private def findDistinctRecursive(tree: BSTNode, values: Set[Int]): Int = {
     if (tree.left.isEmpty && tree.right.isEmpty)
       values.size
     else {
-      val maxLeftRight = (t: Option[Tree]) => {
+      val maxLeftRight = (t: Option[BSTNode]) => {
         t.isEmpty match {
           case true  => 0
           case false => findDistinctRecursive(t.get, values + t.get.x)
@@ -24,7 +24,7 @@ object PreOrderTraversalRecursive {
     }
   }
 
-  def findMaxDistinctValuesRecursive(tree: Tree): Int = {
+  def findMaxDistinctValuesRecursive(tree: BSTNode): Int = {
     val values = Set(tree.x)
     findDistinctRecursive(tree, values)
   }
