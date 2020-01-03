@@ -34,12 +34,12 @@ class TreeSuite extends FunSuite {
   /* ..... / \ ...... / . \ ......... */
   /* .... 2 . 8 .... 19 .. 25........ */
   /* ....... / \ ........ / . \ ..... */
-  /* ...... 7 . 9 ...... 24 . 40 .... */
+  /* ...... 7 . 9 ...... 24 . 27 .... */
   private def createComplexTree(): BSTNode = {
     val treeL5_1 = BSTNode(7, None, None);
     val treeL5_2 = BSTNode(9, None, None);
     val treeL5_3 = BSTNode(24, None, None);
-    val treeL5_4 = BSTNode(40, None, None);
+    val treeL5_4 = BSTNode(27, None, None);
 
     val treeL4_1 = BSTNode(2, None, None);
     val treeL4_2 = BSTNode(8, Some(treeL5_1), Some(treeL5_2));
