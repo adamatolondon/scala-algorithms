@@ -1,11 +1,8 @@
 package com.algorithms.tree
 
-import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
 
-@RunWith(classOf[JUnitRunner])
-class TreeSuite extends FunSuite {
+class TreeTestSuite extends FunSuite {
   /* .......... 10 ...... */
   /* ......... / \ ...... */
   /* ........ 7 . 12 .... */
@@ -13,7 +10,7 @@ class TreeSuite extends FunSuite {
   /* ...... 4 ........... */
   /* ..... / \ .......... */
   /* .... 3 . 6 ......... */
-  private def createSimpleTree(): BSTNode = {
+  protected def createSimpleTree(): BSTNode = {
     val treeL4_1 = BSTNode(6, None, None)
     val treeL4_2 = BSTNode(3, None, None);
 
@@ -35,7 +32,7 @@ class TreeSuite extends FunSuite {
   /* .... 2 . 8 .... 19 .. 25........ */
   /* ....... / \ ........ / . \ ..... */
   /* ...... 7 . 9 ...... 24 . 27 .... */
-  private def createComplexTree(): BSTNode = {
+  protected def createComplexTree(): BSTNode = {
     val treeL5_1 = BSTNode(7, None, None);
     val treeL5_2 = BSTNode(9, None, None);
     val treeL5_3 = BSTNode(24, None, None);
@@ -57,21 +54,4 @@ class TreeSuite extends FunSuite {
     treeL1_1;
   }
 
-  test("Simple Tree One Node") {
-    val tree = BSTNode(7, None, None)
-    val n = PreOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
-    assert(n == 1)
-  }
-
-  test("Simple Tree Recursive") {
-    val tree = createSimpleTree()
-    val n = PreOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
-    assert(n == 4)
-  }
-
-  test("Complex Tree Recursive") {
-    val tree = createComplexTree()
-    val n = PreOrderTraversalRecursive.findMaxDistinctValuesRecursive(tree)
-    assert(n == 5)
-  }
 }
